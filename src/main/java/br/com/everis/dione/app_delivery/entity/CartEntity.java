@@ -14,6 +14,7 @@ public class CartEntity {
     @OneToOne // Um carrinho possui um cliente.
     private ClientEntity clientEntity;
     @OneToMany // Um carrinho possui varios produtos.
+    @JoinColumn(name = "product_id")
     private List<ProductEntity> productsEntity; // Pega minha lista de produtos.
     @Enumerated(EnumType.STRING)
     private Payment payment; // Este pagamento é do tipo enum e será salvo no banco string.

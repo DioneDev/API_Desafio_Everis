@@ -1,6 +1,6 @@
 package br.com.everis.dione.app_delivery.repository;
 
-import br.com.everis.dione.app_delivery.client.ClientEntity;
+import br.com.everis.dione.app_delivery.entity.ClientEntity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

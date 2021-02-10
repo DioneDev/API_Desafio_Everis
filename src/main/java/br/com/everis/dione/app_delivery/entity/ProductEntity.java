@@ -1,7 +1,13 @@
-package br.com.everis.dione.app_delivery.product;
+package br.com.everis.dione.app_delivery.entity;
 
+import javax.persistence.*;
+
+@Entity // Essa classe é uma tabela.
+@Table(name = "Product") //Renomeia o nome da tabela.
 public class ProductEntity {
 
+    @Id // Indentidade da minha tabela.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Para gerar o id automaticamente.
     private int id;
     private String description;
     private double price;
@@ -30,3 +36,4 @@ public class ProductEntity {
         this.price = price;
     }
 }
+

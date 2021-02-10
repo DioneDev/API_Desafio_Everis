@@ -1,4 +1,4 @@
-package br.com.everis.dione.app_delivery.client;
+package br.com.everis.dione.app_delivery.entity;
 
 import javax.persistence.*;
 
@@ -14,6 +14,7 @@ public class ClientEntity {
     private String surname;
     private String cpf;
     private String telephone;
+    private String adress;
 
     public int getId() {
         return id;
@@ -53,5 +54,13 @@ public class ClientEntity {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 }

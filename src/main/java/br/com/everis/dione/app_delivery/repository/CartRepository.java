@@ -8,16 +8,4 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface CartRepository extends JpaRepository<CartEntity, Integer> {
-
-//    // Listar
-//    List<CartEntity> findAll();
-//
-//    // Pesquisar
-//    CartEntity findById(int id);
-//
-//    // Remover
-//    void delete(CartEntity cart);
-//
-//    // Cadastrar / Alterar
-//   // <CartModel extends CartEntity> CartModel save(CartModel cart);
 }

@@ -16,17 +16,19 @@ public class ClientController {
     @Autowired
     private ClientRepository acoes;
 
+    // Listar
     @RequestMapping (method= RequestMethod.GET)
     public List<ClientEntity> listar(){
         return acoes.findAll();
     }
 
-//    @RequestMapping(value="/{id}", method= RequestMethod.GET)
-//    public ClientEntity pesquisarPorId(@PathVariable int id){
-//        return acoes.findById(id).get();
-//
-//    }
+    // Cadastrar
+    @RequestMapping (method= RequestMethod.POST)
+    public ClientEntity cadastrar(@RequestBody ClientEntity client){ // @ResquestBody vai dizer para o meu backend que esta recebendo informações do frontend.
+        return acoes.save(client);
+    }
 
+    // Pesquisar por Id
     @RequestMapping(value="/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> pesquisarPorId(@PathVariable int id){
         Optional<ClientEntity> client = acoes.findById(id);
@@ -36,11 +38,7 @@ public class ClientController {
         return ResponseEntity.ok("Id do cliente não encontrado");
     }
 
-    @RequestMapping (method= RequestMethod.POST)
-    public ClientEntity cadastrar(@RequestBody ClientEntity client){ // @ResquestBody vai dizer para o meu backend que esta recebendo informações do frontend.
-        return acoes.save(client);
-    }
-
+    // Atualizar
     @RequestMapping(method= RequestMethod.PUT)
     public ResponseEntity<?> atualizar(@RequestBody ClientEntity client){
         Optional<ClientEntity> clienteVerificado = acoes.findById(client.getId());
@@ -48,9 +46,10 @@ public class ClientController {
              acoes.save(client);
              return ResponseEntity.ok(client);
         }
-        return ResponseEntity.ok("Cliente não encontrado!");
+        return ResponseEntity.ok("Houve um problema ao atualizar!");
     }
 
+    // Deletar
     @RequestMapping(value="/{id}", method= RequestMethod.DELETE)
     public ResponseEntity<String> deletar(@PathVariable int id){
          acoes.deleteById(id);

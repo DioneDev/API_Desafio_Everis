@@ -17,7 +17,7 @@ public class CartEntity {
     @JoinColumn(name = "product_id")
     private List<ProductEntity> productsEntity; // Pega minha lista de produtos.
     @Enumerated(EnumType.STRING)
-    private Payment payment; // Este pagamento é do tipo enum e será salvo no banco string.
+    private Payment payment; // Este pagamento é do tipo enum e será salvo no banco com string.
 
     public int getId() {
         return id;

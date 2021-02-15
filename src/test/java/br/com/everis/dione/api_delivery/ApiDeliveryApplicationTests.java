@@ -1,4 +1,4 @@
-package br.com.everis.dione.app_delivery;
+package br.com.everis.dione.api_delivery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

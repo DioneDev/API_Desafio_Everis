@@ -1,4 +1,4 @@
-package br.com.everis.dione.app_delivery.entity;
+package br.com.everis.dione.api_delivery.entity;
 
 public enum Payment {
     CREDIT, DEBIT, MONEY;

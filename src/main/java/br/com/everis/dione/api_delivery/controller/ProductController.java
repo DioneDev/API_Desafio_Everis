@@ -1,9 +1,7 @@
-package br.com.everis.dione.app_delivery.controller;
+package br.com.everis.dione.api_delivery.controller;
 
-import br.com.everis.dione.app_delivery.entity.ClientEntity;
-import br.com.everis.dione.app_delivery.entity.ProductEntity;
-import br.com.everis.dione.app_delivery.repository.ClientRepository;
-import br.com.everis.dione.app_delivery.repository.ProductRepository;
+import br.com.everis.dione.api_delivery.entity.ProductEntity;
+import br.com.everis.dione.api_delivery.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
